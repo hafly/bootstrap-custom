@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>表单</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-extra.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+<body>
+<!--面包屑导航-->
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">2013</a></li>
+    <li class="active">十一月</li>
+</ul>
+
+<div class="container" style="margin-left:0;margin-top:50px">
+    <div class="pull-right">
+        <a href="" class="btn btn-default"><span class="icon-reply"> 返回</span></a>
+    </div>
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="icon-th-list"></i> 面板</h3>
+        </div>
+        <div class="panel-body" style="margin-bottom:30px;">
+            <div class="navbar navbar-default" style="height:50px;">
+                <form class="form-inline form-search" style="margin:7px;">
+                    <a href="" class="btn btn-primary"><span class="icon-search"></span> 搜索</a>
+                    <a href="" class="btn btn-info"><span class="icon-plus"></span> 添加</a>
+                </form>
+            </div>
+            <!-- 表单 -->
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-2 control-label">名字</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control block-middle" id="firstname" placeholder="请输入名字">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">姓</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control block-middle" id="lastname" placeholder="请输入姓">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">选择</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" style="width: auto">
+                            <option>选项1</option>
+                            <option>选项2</option>
+                            <option>选项3</option>
+                            <option>选项4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">商品缩略图</label>
+                    <div class="col-sm-10">
+                        <div class="upload-preview"><img src="../img/blank.png" /><span></span><input class="upload-input" type="file" accept="image/jpeg,image/x-png" onchange="uploadPreview(this);" name="thumb" /></div>
+                        <span class="help-block">（请上传商品缩略图）</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <label>默认的复选框和单选按钮的实例</label>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value=""> 选项 1</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value=""> 选项 2</label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 选项 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 选项 2 - 选择它将会取消选择选项 1
+                            </label>
+                        </div>
+                        <label>内联的复选框和单选按钮的实例</label>
+                        <div>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 选项 1
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox2" value="option2"> 选项 2
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox3" value="option3"> 选项 3
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked> 选项 1
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="optionsRadiosinline" id="optionsRadios4" value="option2"> 选项 2
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">登录</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+    function uploadPreview(file) {
+        if (file.files && file.files[0]) {
+            var _file = file.files[0];
+            var url = window.URL.createObjectURL(_file);
+            $(file).parent().find('img').attr('src', url);
+        }
+    }
+</script>
+</body>
+</html>

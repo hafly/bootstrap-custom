@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>图片懒加载</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        #container {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <div class="content-wrap">
+        <h2>淡入效果</h2>
+        <p>
+            不在可视范围内的图片不会加载。滚动时按需加载。图片出现时使用的是jquery的淡入效果。请清空缓存重新测试一下。
+        </p>
+        <pre class="prettyprint">
+                new lazyload({
+                    container: '#container',
+                });
+        </pre>
+        <div id="container">
+            <div id="wrapper">
+                <img class="lazyload img-responsive" data-original="../img/slider/1.png" alt="1" src="">
+                <br>
+                <img class="lazyload img-responsive" data-original="../img/slider/2.png" alt="2" src="">
+                <br>
+                <img class="lazyload img-responsive" data-original="../img/slider/3.png" alt="3" src="">
+                <br>
+                <img class="lazyload img-responsive" data-original="../img/slider/4.png" alt="4" src="">
+                <br>
+                <img class="lazyload img-responsive" data-original="../img/slider/5.png" alt="5" src="">
+                <br>
+                <img class="lazyload img-responsive" data-original="../img/slider/6.png" alt="6" src="">
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/lazyload.js"></script>
+<script>
+    var html = $('#wrapper').html();
+
+    var lazy = new lazyload({
+        container: '#container',
+    });
+
+    $('#container').scroll(function () {
+        var scrollTop = $(this).children('#wrapper').position().top;
+        var scrollHeight = $(this).children('#wrapper').height();
+        var windowHeight = $(this).height();
+        if (windowHeight - scrollTop === scrollHeight) {
+            $('#wrapper').append(html);
+            lazy.update();
+        }
+    });
+</script>
+</body>
+</html>

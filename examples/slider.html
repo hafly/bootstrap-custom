@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>滑动器</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-extra.css">
+    <style>
+        ul{list-style:none;margin:0;padding:0;}
+    </style>
+</head>
+<body>
+<div class="container" style="margin-top:100px;">
+    <!-- 图片无缝滚动 -->
+    <div class="slider slider-horizontal" style="width:100%;height:150px;border:1px solid #646464;">
+        <ul>
+            <li><div><img src="../img/slider/1.png" /></div></li>
+            <li><div><img src="../img/slider/2.png" /></div></li>
+            <li><div><img src="../img/slider/3.png" /></div></li>
+            <li><div><img src="../img/slider/4.png" /></div></li>
+
+        </ul>
+    </div>
+
+    <div class="slider slider-vertical" style="margin-top:50px;width: 300px; height: 60px;border: 1px solid #646464;">
+        <ul>
+            <li style="height: 30px;line-height:30px;"><div>1</div></li>
+            <li style="height: 30px;line-height:30px;"><div>2</div></li>
+            <li style="height: 30px;line-height:30px;"><div>3</div></li>
+            <li style="height: 30px;line-height:30px;"><div>4</div></li>
+            <li style="height: 30px;line-height:30px;"><div>5</div></li>
+            <li style="height: 30px;line-height:30px;"><div>6</div></li>
+        </ul>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+    //图片无缝滚动
+    $.fn.scrollImage = function (options) {
+        var defaults = {
+            interval: 50,    //时间间隔
+            speed: 1,
+        };
+        var settings = $.extend({}, defaults, options);
+
+        var $container = $(this).children('ul');
+        var width = $container.width();
+        if (width <= $(this).width()) return;
+
+        $container.append($container.html());
+
+        var offset = 0, pause = false;
+        function move() {
+            if (pause) return;
+            if (offset < -width) {
+                $container.css('left', 0);
+                offset = 0;
+            };
+            $container.css('left', offset);
+            offset -= settings.speed;
+        }
+        setInterval(move, settings.interval);
+        $(this).hover(function () { pause = true; }, function () { pause = false; });
+    }
+    $('.slider-horizontal').scrollImage();
+
+    /*文字间隔滚动*/
+    $.fn.scrollText = function (options) {
+        var defaults = {
+            interval: 2000,
+            speed: 1,
+            height: 30
+        }
+        var settings = $.extend({}, defaults, options);
+        var $container = $(this).children('ul');
+
+        $container.append($container.html());
+
+        var height = $container[0].offsetHeight;
+        var offset = settings.height, pause = false;
+        function scroll() {
+            if (!pause) {
+                if (offset <= -height / 2) {
+                    $container.css('top', 0);
+                    offset = 0;
+                }
+                offset -= settings.height;
+                $container.stop().animate({ 'top': offset, }, settings.speed * 300);
+            }
+            setTimeout(scroll, settings.interval);
+        }
+        scroll();
+        $(this).hover(function () { pause = true; }, function () { pause = false; });
+    }
+    $('.slider-vertical').scrollText();
+</script>
+</body>
+</html>
