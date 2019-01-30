@@ -21,7 +21,7 @@
 .navbar-navy .navbar-nav>li>a:hover{color:#ddd !important;}
 
 /*模态框*/
-.modal{display:none;position:fixed;z-index:2000;top:0;right:0;bottom:0;left:0;overflow:hidden;-webkit-overflow-scrolling:touch;outline:0;background-color:rgba(0,0,0,0.3);color:#333;}.modal-dialog{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}.modal-content{position:relative;background-color:#fff;border:1px solid rgba(0,0,0,.2);}.modal-header{padding:10px 15px;border-bottom:1px solid #e5e5e5;box-sizing:border-box;}.modal-title{margin:0;line-height:1.42857143;}.modal-body{position:relative;overflow:hidden;width:auto;height:auto;}
+.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;outline:0;}.modal.fade .modal-dialog{transition:transform .3s ease-out;transform:translate(0,-25%);}.modal.in .modal-dialog{transform:translate(0,0);}.modal-open .modal{overflow-x:hidden;overflow-y:auto;}.modal-dialog{position:relative;width:auto;margin:10px;}.modal-content{position:relative;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;outline:0;box-shadow:0 3px 9px rgba(0,0,0,.5);}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5;}.modal-header .close{margin-top:-2px;}.modal-title{margin:0;line-height:1.42857143;}.modal-body{position:relative;padding:15px;}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5;}.modal-footer .btn + .btn{margin-bottom:0;margin-left:5px;}.modal-footer .btn-group .btn + .btn{margin-left:-1px;}
 
 /*菜单*/
 .menu{position:fixed;z-index:1080;left:0;min-width:250px;height:100%;background:#ffffff;color:#555;overflow:auto;}.menu a{color:#555;text-decoration:none;}
@@ -35,6 +35,9 @@
 .menu .has-arrow{position:relative;}
 .menu .has-arrow:after{position:absolute;content:"";width:.5em;height:.5em;border-width:1px 0 0 1px;border-style:solid;border-color:initial;right:1em;-webkit-transform:rotate(-45deg) translateY(-50%);transform:rotate(-45deg) translateY(-50%);-webkit-transform-origin:top;transform-origin:top;top:50%;transition:all .3s ease-out;}
 .menu .active.has-arrow:after{transform: rotate(-135deg) translateY(-50%);}
+
+/*多媒体对象*/
+.media{margin-top:15px;}.media:first-child{margin-top:0;}.media,.media-body{overflow:hidden;zoom:1;}.media-body{width:10000px;}.media-object{display:block;}.media-object.img-thumbnail{max-width:none;}.media-right,.media > .pull-right{padding-left:10px;}.media-left,.media > .pull-left{padding-right:10px;}.media-left,.media-right,.media-body{display:table-cell;vertical-align:top;}.media-middle{vertical-align:middle;}.media-bottom{vertical-align:bottom;}.media-heading{margin-top:0;margin-bottom:5px;}.media-list{padding-left:0;list-style:none;}
 
 /*进度条*/
 @-webkit-keyframes progress-bar-stripes{from{background-position:40px 0;}to{background-position:0 0;}}@-o-keyframes progress-bar-stripes{from{background-position:40px 0;}to{background-position:0 0;}}@keyframes progress-bar-stripes{from{background-position:40px 0;}to{background-position:0 0;}}
