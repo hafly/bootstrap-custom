@@ -8,8 +8,8 @@
             speed: 200,         // 菜单折叠速度
             toggle: true        // 自动隐藏菜单
         };
-        var self = this,
-            $item = $(this).find('ul li');
+        var self = this;
+        var $item = $(this).find('ul li');
 
         var settins = $.extend({}, defaults, options);
 

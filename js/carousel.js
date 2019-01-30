@@ -4,8 +4,8 @@
  */
 (function ($) {
     'use strict';
-    var Carousel = function (element, options) {
-        this.element = element;
+    var Carousel = function ($element, options) {
+        this.$element = $element;
         this.defaults = {
             interval: 5000,     // 轮播间隔时间
             autoplay: true,     // 自动播放
@@ -13,9 +13,9 @@
         };
         this.options = $.extend({}, this.defaults, options);
 
-        this.$items = $(element).find('.carousel-inner').children();
-        this.$indicators = $(element).find('.carousel-indicators>li');
-        this.$control = $(element).find('.carousel-control');
+        this.$items = $element.find('.carousel-inner').children();
+        this.$indicators = $element.find('.carousel-indicators>li');
+        this.$control = $element.find('.carousel-control');
 
         this.itemLength = this.$items.length - 1;
         this.itemIndex = 0;
@@ -23,6 +23,7 @@
         this.paused = false;    // 悬浮时暂停
         this.sliding = false;   // 滑动中
         this.timer = 0;
+        this.init();
     }
     Carousel.prototype = {
         init: function () {
@@ -77,8 +78,8 @@
         },
         bindEvent: function () {
             var self = this;
-            if (this.pause === 'hover') {
-                $(this.element).hover(function () {
+            if (self.pause === 'hover') {
+                $(self.$element).hover(function () {
                     self.paused = true;
                 }, function () {
                     self.paused = false;
@@ -113,7 +114,6 @@
         }
     }
     $.fn.carousel = function (options) {
-        var carousel = new Carousel(this, options);
-        return carousel.init();
+        new Carousel(this, options);
     }
 })(jQuery);

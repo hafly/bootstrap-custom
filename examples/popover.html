@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>popover弹出框</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+<div class="container" style="padding: 100px 50px 10px;" >
+    <p>
+        <button type="button" class="btn btn-default" title="Popover title" data-toggle="popover" data-placement="left" data-content="左侧的 Popover 中的一些内容">左侧的 Popover</button>
+        <button type="button" class="btn btn-primary" title="Popover title" data-toggle="popover" data-placement="top" data-content="顶部的 Popover 中的一些内容">顶部的 Popover</button>
+        <button type="button" class="btn btn-success" title="Popover title" data-toggle="popover" data-placement="bottom" data-content="底部的 Popover 中的一些内容">底部的 Popover</button>
+        <button type="button" class="btn btn-warning" title="Popover title" data-toggle="popover" data-placement="right" data-content="右侧的 Popover 中的一些内容">右侧的 Popover</button>
+    </p>
+
+    <p class="text-center"><button type="button" class="btn btn-default" title="Popover title" id="element" data-placement="bottom">特殊内容+事件</button></p>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popover.js"></script>
+<script>
+    $("[data-toggle='popover']").popover();
+
+    var html='<div class="panel">\n' +
+        '        <div class="panel-heading">\n' +
+        '            <h3 class="panel-title"><i class="icon-th-list"></i> 面板</h3>\n' +
+        '        </div>\n' +
+        '        <div class="panel-body" style="margin-bottom:30px;">\n' +
+        '            <div class="navbar navbar-default" style="height:50px;">\n' +
+        '                <form class="form-inline form-search" style="margin:7px;">\n' +
+        '                    <a href="" class="btn btn-primary"><span class="icon-search"></span> 搜索</a>\n' +
+        '                    <a href="" class="btn btn-info"><span class="icon-plus"></span> 添加</a>\n' +
+        '                </form>\n' +
+        '            </div>\n' +
+        '            <!-- 表单 -->\n' +
+        '            <form class="form-horizontal" role="form">\n' +
+        '                <div class="form-group">\n' +
+        '                    <label for="firstname" class="col-sm-2 control-label">名字</label>\n' +
+        '                    <div class="col-sm-10">\n' +
+        '                        <input type="text" class="form-control block-middle" id="firstname" placeholder="请输入名字">\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '                <div class="form-group">\n' +
+        '                    <label for="lastname" class="col-sm-2 control-label">姓</label>\n' +
+        '                    <div class="col-sm-10">\n' +
+        '                        <input type="text" class="form-control block-middle" id="lastname" placeholder="请输入姓">\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '                <div class="form-group">\n' +
+        '                    <label for="lastname" class="col-sm-2 control-label">选择</label>\n' +
+        '                    <div class="col-sm-10">\n' +
+        '                        <select class="form-control" style="width: auto">\n' +
+        '                            <option>选项1</option>\n' +
+        '                            <option>选项2</option>\n' +
+        '                            <option>选项3</option>\n' +
+        '                            <option>选项4</option>\n' +
+        '                        </select>\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '                <div class="form-group">\n' +
+        '                    <label for="lastname" class="col-sm-2 control-label">商品缩略图</label>\n' +
+        '                    <div class="col-sm-10">\n' +
+        '                        <div class="upload-preview"><img src="../img/blank.png" /><span></span><input class="upload-input" type="file" accept="image/jpeg,image/x-png" onchange="uploadPreview(this);" name="thumb" /></div>\n' +
+        '                        <span class="help-block">（请上传商品缩略图）</span>\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '                <div class="form-group">\n' +
+        '                    <div class="col-sm-offset-2 col-sm-10">\n' +
+        '                        <label>默认的复选框和单选按钮的实例</label>\n' +
+        '                        <div class="checkbox">\n' +
+        '                            <label><input type="checkbox" value=""> 选项 1</label>\n' +
+        '                        </div>\n' +
+        '                        <div class="checkbox">\n' +
+        '                            <label><input type="checkbox" value=""> 选项 2</label>\n' +
+        '                        </div>\n' +
+        '                        <div class="radio">\n' +
+        '                            <label>\n' +
+        '                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 选项 1\n' +
+        '                            </label>\n' +
+        '                        </div>\n' +
+        '                        <div class="radio">\n' +
+        '                            <label>\n' +
+        '                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 选项 2 - 选择它将会取消选择选项 1\n' +
+        '                            </label>\n' +
+        '                        </div>\n' +
+        '                        <label>内联的复选框和单选按钮的实例</label>\n' +
+        '                        <div>\n' +
+        '                            <label class="checkbox-inline">\n' +
+        '                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 选项 1\n' +
+        '                            </label>\n' +
+        '                            <label class="checkbox-inline">\n' +
+        '                                <input type="checkbox" id="inlineCheckbox2" value="option2"> 选项 2\n' +
+        '                            </label>\n' +
+        '                            <label class="checkbox-inline">\n' +
+        '                                <input type="checkbox" id="inlineCheckbox3" value="option3"> 选项 3\n' +
+        '                            </label>\n' +
+        '                            <label class="checkbox-inline">\n' +
+        '                                <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked> 选项 1\n' +
+        '                            </label>\n' +
+        '                            <label class="checkbox-inline">\n' +
+        '                                <input type="radio" name="optionsRadiosinline" id="optionsRadios4" value="option2"> 选项 2\n' +
+        '                            </label>\n' +
+        '                        </div>\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '                <div class="form-group">\n' +
+        '                    <div class="col-sm-offset-2 col-sm-10">\n' +
+        '                        <button type="submit" class="btn btn-default">登录</button>\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '            </form>\n' +
+        '        </div>\n' +
+        '    </div>';
+    $('#element').popover({
+        content: html,
+        html: true
+    });
+    $('#element').on('shown.bs.popover', function () {
+        console.log("Alert message on shown");
+    });
+</script>
+</body>
+</html>
