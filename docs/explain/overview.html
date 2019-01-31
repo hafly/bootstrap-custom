@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../vendor/SyntaxHighlighter/shCoreDefault.css">
+    <link rel="stylesheet" href="../../css/doc.css">
+</head>
+<body>
+    <ol class="breadcrumb">
+        <li><i class="icon-home"></i> <a href="#">首页</a></li>
+        <li>&gt;</li>
+        <li><a href="">概述</a></li>
+    </ol>
+    <article class="wrap" style="margin-top:50px;">
+        <h1 class="page_title">概述</h1>
+        <h2>0. 引言</h2>
+        <p>老子《道德经》曰：道生一，一生二，二生三，三生万物。</p>
+        <p>从点、线、面、体去剖析前端框架！</p>
+        <p><strong>点：</strong>html标签、css属性、js语法</p>
+        <p><strong>线：</strong>由HTML+css+js 开发的组件、模块</p>
+        <p><strong>面：</strong>由组件组合起来的页面</p>
+        <p><strong>体：</strong>由多个页面组合起来的网站系统</p>
+        <h2>1.下载</h2>
+        <p>请具备一定的html和css web前端基础。</p>
+        <h2>2.目录结构</h2>
+        <pre>
+    static/	    资源
+    ├── lib/				    框架目录
+    │    ├── css/			样式
+    │    │    ├── lib.reset.css		CSS Reset
+    │    │    ├── lib.css				lib.css
+    │    │    ├── lib.min.css			lib.css(min版)
+    │    │    ├── font-awesome.min.css	字体库（文档：http://www.bootcss.com/p/font-awesome/）
+    │    │    ├── font-make.css     	字体库（FontCreator定制自己的图标字库，素材：http://www.iconfont.cn/）
+    │    │    ├── animate.min.css	    动画库（文档：https://daneden.github.io/animate.css/）
+    │    ├── img/			图片资源 
+    │    ├── fonts/			字体库资源
+    │    ├── js/
+    │    │    ├── lib.js				lib核心脚本
+    │    │    ├── lib.min.js			lib核心脚本(min版)
+    │    │    ├── scrollspy.js			lib导航滚动监听插件
+    │    │    ├── carousel.js			lib幻灯片插件
+    │    │    ├── slider.js			lib滚动插件
+    │    │    ├── ……			        lib其它插件
+    │    │    ├── jquery.min.js		jQuery类库（v3.2.1）
+    │    │    ├── jquery.form.min.js	表单插件
+    │    │    ├── jquery.easing.min.js	动画扩展
+    │    │    ├── utils.min.js		    js工具库
+    plugins/    第三方插件（根据需求选择）
+    ├── layer			        弹出层
+    ├── swiper				    触摸内容滑动
+    ├── wow				        动画插件
+    ├── jquery.validation		表单验证
+    ├── jquery.lazyload			懒加载
+    ├── jquery.dropload			上拉刷新，下拉加载
+    ├── jquery.fly			    飞出动画
+    ├── distpicker				地区选择
+    ├── ueditor				    富文本编辑
+    ├── webuploader				富文本编辑
+    ├── SyntaxHighlighter		代码高亮
+    ├── chart			        图标插件
+    ├── 其它插件
+    ├── webgl        			(three.min.js)
+    ├── player        			(ckplayer,dplayer)
+    ├── swfobject.js			    Flash插件
+    ├── krpano			        全景插件
+        </pre>
+        
+        <h3>reset.css</h3>
+        <p>就是我们常用的CSS Reset，许多大网站的CSS文件中也含有CSS Reset内容。</p>
+        <p>作用：把浏览器提供的默认样式覆盖掉。因为浏览器的默认样式往往会给我们带来麻烦，影响开发效率。所以解决的方法就是一开始就将浏览 器的默认样式全部去掉，更准确说就是通过重新定义标签样式。</p>
+        <p><span class="alert alert-warning radius">注意：</span> 要慎用重置样式，这会影响到全局和其它css样式。</p>
+        <h3>bootstrap.css</h3>
+        <p>bootstrap的基础样式，也是核心样式，框架章节重要讲解的内容。</p>
+        <p>详情请参考<a href="explain/htmlStructure.shtml"><u>Html书写规范</u></a></p>
+        <p>剩下的文件都属于扩展文件，可以在实用项目实施过程中灵活调用修改。</p>
+        <p>后期会不断增加。lib的宗旨是：<strong>不求多炫，实用为主</strong>。</p>
+    </article>
+
+    <script src="../../vendor/SyntaxHighlighter/shCore.js"></script>
+    <script>
+        SyntaxHighlighter.highlight('pre.code');
+    </script>
+</body>
+</html>

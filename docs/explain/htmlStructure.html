@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../vendor/SyntaxHighlighter/shCoreDefault.css">
+    <link rel="stylesheet" href="../../css/doc.css">
+</head>
+<body>
+    <ol class="breadcrumb">
+        <li><i class="icon-home"></i> <a href="#">首页</a></li>
+        <li>&gt;</li>
+        <li><a href="">Html书写规范</a></li>
+    </ol>
+    <article class="wrap" style="margin-top:50px;">
+        <h1 class="page_title">Html书写规范</h1>
+
+        <p>1、推荐使用html5的文档声明。</p>
+        <div class="pl-20">
+            <pre>!DOCTYPE HTML</pre>
+        </div>
+        <p>2、必须申明文档的编码charset，且与文件本身编码保持一致，推荐使用UTF-8编码。</p>
+        <div class="pl-20">
+            <pre><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span></pre>
+        </div>
+        <p>3、title 不可缺少，控制在25个字、50个字节以内。“二级栏目 - 一级栏目 - 网站名称”。</p>
+        <p>4、keywords很重要，关键词，针对SEO。</p>
+        <p class="pl-20"><span class="alert alert-warning">注意：</span> 5个左右,单个8汉字以内；禁忌堆砌，与网站主题无关。</p>
+        <p>5、description网站描述，字数尽量空制在80个汉字，160个字符以内。</p>
+        <p>6、建议采用响应式栅格化处理，兼容多个平台设备。</p>
+        <p>7、书写注释，方便程序开发嵌套。注释方式：</p>
+        <p class="pl-20">
+            开始注释：&lt;!-- 注释 --&gt;<br>
+            结束注释：&lt;!-- /注释文案 --&gt;<br>
+            允许只有开始注释
+        </p>
+        <p class="pl-20"><span class="alert alert-warning">注意：</span> 浮动的地方不要加注释，可能导致布局错位或文字的BUG。</p>
+        <p>8、img添加alt属性，增加可访问性。</p>
+        <div class="pl-20">
+            <pre><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">""</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">"图片描述"</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"图片描述"</span><span class="tag">&gt;</span></pre>
+        </div>
+        <p>9、带有实体名称的 ASCII 实体或特殊字符要使用实体名。</p>
+        <p class="pl-20"><span class="alert alert-warning">注意：</span> 实体名称对大小写敏感。</p>
+        <div class="pl-20">
+            <table class="table table-border table-bg table-bordered">
+                <thead>
+                    <tr>
+                        <th width="33%">字符</th>
+                        <th width="33%">名称</th>
+                        <th>实体名</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>¥</td>
+                        <td>人民币符号：元</td>
+                        <td>&amp;yen;</td>
+                    </tr>
+                    <tr>
+                        <td>©</td>
+                        <td>版权</td>
+                        <td>&amp;copy;</td>
+                    </tr>
+                    <tr>
+                        <td>®</td>
+                        <td>注册商标</td>
+                        <td>&amp;reg;</td>
+                    </tr>
+                    <tr>
+                        <td>™</td>
+                        <td>商标TM</td>
+                        <td>&amp;trade;</td>
+                    </tr>
+                    <tr>
+                        <td>·</td>
+                        <td>间隔符号</td>
+                        <td>&amp;middot;</td>
+                    </tr>
+                    <tr>
+                        <td>"</td>
+                        <td>双引号</td>
+                        <td>&amp;quot;</td>
+                    </tr>
+                    <tr>
+                        <td>&amp;</td>
+                        <td>&amp;符</td>
+                        <td>&amp;amp;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>左尖括号（小于号）</td>
+                        <td>&amp;lt;</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>右尖括号（大于号） </td>
+                        <td>&amp;gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>半角空格</td>
+                        <td>&amp;nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>×</td>
+                        <td>乘号</td>
+                        <td>&amp;times;</td>
+                    </tr>
+                    <tr>
+                        <td>÷</td>
+                        <td>除号</td>
+                        <td>&amp;divide;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>10、标签一定要正确嵌套，标签一定要闭合。</p>
+        <p>11、用div等标签布局；表格型数据，table首选。</p>
+        <p>12、代码风格采用树形结构，提高可读性；避免冗余嵌套。</p>
+        <p>13、模块之间必须保持独立，区块化布局，方便随意增删改，多人协作维护。</p>
+        <p>14、非特殊情况下，css采用外链，加在&lt;head&gt;之间；js文件放在页面底部&lt;/body&gt;之前。</p>
+        <p>15、自定义标签或者属性，用data-开头。</p>
+        <p>16、需要程序单独赋值或者控制的地方尽量用独立的标签包括起来，方便添加id和其他自定义属性。</p>
+        <p>17、可能程序在套用时候标签之间会出现空数据，产生（冗余标签）造成多余空白间距，请一定注释声明给后端程序员注意一下，将判断包住标签。</p>
+        <p>18、避免元素的滚动条和body的滚动条同时出现，影响体验。</p>
+        <p>19、需要异步加载的地方给出加载中（loading）状态效果。</p>
+        <h4>下面给出html模版：</h4>
+
+        <pre class="brush:html;toolbar:false">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit|ie-comp|ie-stand&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,user-scalable=no&quot; /&gt; 
+&lt;title&gt;网站标题，控制在25个字、50个字节以内&lt;/title&gt; 
+&lt;meta name=&quot;keywords&quot; content=&quot;关键词,5个左右,单个8汉字以内&quot;&gt; 
+&lt;meta name=&quot;description&quot; content=&quot;网站描述，字数尽量空制在80个汉字，160个字符以内！&quot;&gt; 
+&lt;link rel=&quot;Bookmark&quot; href=&quot;favicon.ico&quot; &gt; 
+&lt;link rel=&quot;Shortcut Icon&quot; href=&quot;favicon.ico&quot; /&gt; 
+&lt;!--[if lt IE 9]&gt; 
+&lt;script type=&quot;text/javascript&quot; src=&quot;Lib/html5.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;Lib/respond.min.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt; 
+&lt;link href=&quot;h-ui/css/H-ui.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;link href=&quot;lib/Hui-iconfont/1.0.8/iconfont.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;link href=&quot;h-ui/css/style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;&lt;!--自己的样式--&gt;
+&lt;!--[if IE 6]&gt; 
+&lt;script type=&quot;text/javascript&quot; src=&quot;Lib/DD_belatedPNG_0.0.8a-min.js&quot; &gt;&lt;/script&gt;
+&lt;script&gt;DD_belatedPNG.fix(&#39;.pngfix,.icon&#39;);&lt;/script&gt; 
+&lt;![endif]--&gt; 
+&lt;/head&gt; 
+&lt;body&gt;
+&lt;header&gt;网站头部&lt;/header&gt;
+&lt;div&gt;内容部分&lt;/div&gt;
+&lt;footer&gt;页脚&lt;/footer&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;lib/jquery.min.js&quot;&gt;&lt;/script&gt; 
+&lt;script type=&quot;text/javascript&quot; src=&quot;h-ui/js/h-ui.js&quot;&gt;&lt;/script&gt; 
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </article>
+
+    <script src="../../vendor/SyntaxHighlighter/shCore.js"></script>
+    <script>
+        SyntaxHighlighter.highlight('pre.code');
+    </script>
+</body>
+</html>

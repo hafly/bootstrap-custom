@@ -1,0 +1,65 @@
+﻿body {
+    font-family: 'Microsoft YaHei';
+}
+ul,li{margin: 0;padding:0;list-style: none;}
+.table{text-align: left;}
+.wrap{
+    padding:0 15px;
+}
+.breadcrumb {
+    margin-bottom: 0;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.breadcrumb > li + li:before {
+    padding: 0 2px;
+    color: #ccc;
+    content: "";
+}
+.page_title {
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.alert{padding:4px 8px;}
+
+pre {
+    display: block;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    padding: 9.5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+}
+
+    pre ol {
+        margin: 0;
+    }
+
+.syntaxhighlighter .plain {
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    color: #333 !important;
+}
+
+.syntaxhighlighter td.gutter .line {
+    padding: 4px .5em 4px 1em !important;
+}
+
+.syntaxhighlighter td.code .line {
+    padding: 4px 1em !important;
+}
+
+.syntaxhighlighter td.code {
+    padding: 10px 10px 10px 0 !important;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}

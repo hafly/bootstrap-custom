@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../vendor/SyntaxHighlighter/shCoreDefault.css">
+    <link rel="stylesheet" href="../../css/doc.css">
+</head>
+<body>
+<ol class="breadcrumb">
+    <li><i class="icon-home"></i> <a href="#">首页</a></li>
+    <li>&gt;</li>
+    <li><a href="">概述</a></li>
+</ol>
+<article class="wrap" style="margin-top:50px;">
+    <h3>注意事项</h3>
+    <pre>
+    1. 页面编码规范
+    1.1. 统一使用 UTF-8 编码,用@charset "utf-8"指定页面编码。
+    1.2. 全局字体设置：
+    windows 7系统：微软雅黑 Arial；
+    windows XP及以下：新宋体，宋体，Arial
+    MAC默认字体：Helvetica Neue和Helvetica Hiragino Sans GB。
+    font-family:"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,Verdana,sans-serif,"WenQuanYi Micro Hei","\5B8B\4F53";
+    1.3. 中文字体使用编码转换，请参阅下节“<a href="Hui-notes-cnFont.shtml" class="maincolor"><u>中文字体css编码转换</u></a>”
+    1.4. 推荐使用<a class="maincolor" href="websafecolors.shtml" target="_blank"><u>216web安全色</u></a>
+    2. 属性写在一行内，属性之间、属性名和值之间以及属性与“{}”之间应减少空格，去掉最后一个“;”，例如：.class{width:200px;height:100px}
+    3. 属性的书写顺序：
+    3.1. 按照元素模型由外及内，由整体到细节书写，大致分为五组：
+    位置：position,left,right,float
+    盒模型属性：display,margin,padding,width,height
+    边框与背景：border,background
+    段落与文本：line-height,text-indent,font,color,text-decoration,...
+    其他属性：overflow,cursor,visibility,...
+    3.2. 针对特殊浏览器的属性，应写在标准属性之前，例如：-webkit-box-shadow:;-moz-box-shadow:;box-shaow:;
+    4. 带有前缀的属性，单独一行，通过缩进，让每个属性的值垂直对齐，方便编辑维护。
+    5. 谨慎添加新的选择符规则，尤其不可滥用 id，尽可能继承和复用已有样式
+    6. 选择符、属性、值均用小写（格式的颜色值除外），缩写的选择符名称须说明缩写前的全称，例如 .cl -&gt; Clearfix
+    7. 避免使用各种CSS Hack，如需对 IE 进行特殊定义，请参阅下节“关于 <a href="Hui-notes-cssHack.shtml" class="maincolor"><u>CSS Hack</u></a> 的说明”
+    8. 勿使用冗余低效的 CSS 写法，例如：ul li a span{... }
+    9. 慎用 !important
+    10. 建议使用具有语义化的classname或id，请参阅下节“<a href="Hui-notes-cssHame.shtml" class="maincolor"><u>css命名规范</u></a>”。
+    11.避免使用兼容性不好的使用滤镜
+    12.开发过程中的未定事项，须用 [!] 标出，以便于后续讨论整理。
+    13.注释格式，统一使用双斜杠加*。
+    14.上下模块之间的间距统一使用下一个模块的margin-top来实现，好处是：如果没有下一个模块也不会多出一段空隙。
+    15.hover，selected，disabled，current等具有特定意义的请勿直接占用。
+    16.:link :visited :hover :active书写顺序 L-V-H-A，速记：LoVe（喜欢）HAte（讨厌）。
+    17.不要使用 @import
+</pre>
+    <h3>中文字体css编码转换</h3>
+    <pre>
+    微软雅黑   \5FAE\8F6F\96C5\9ED1  或 Microsoft YaHei
+    黑体       \9ED1\4F53
+    新宋体     \65b0\5b8b\4f53
+    宋体       \5b8b\4f53
+</pre>
+</article>
+<script src="../../vendor/SyntaxHighlighter/shCore.js"></script>
+<script>
+    SyntaxHighlighter.highlight('pre.code');
+</script>
+</body>
+</html>

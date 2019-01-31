@@ -15,10 +15,8 @@
 
 /*导航栏蓝色样式*/
 .navbar-navy{background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4d5b76), color-stop(1, #6f80a1)) !important;background: #4d5b76;color:#fff;border-color: #6f80a1;}
-.navbar-navy .navbar-brand,
-.navbar-navy .navbar-nav>li>a{color:#fff;background-color:transparent;}
-.navbar-navy .navbar-brand:hover,
-.navbar-navy .navbar-nav>li>a:hover{color:#ddd !important;}
+.navbar-navy .navbar-brand,.navbar-navy .navbar-nav>li>a{color:#fff;background-color:transparent;}
+.navbar-navy .navbar-brand:hover,.navbar-navy .navbar-nav>li>a:hover{color:#ddd !important;}
 
 /*模态框*/
 .modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;outline:0;}.modal.fade .modal-dialog{transition:transform .3s ease-out;transform:translate(0,-25%);}.modal.in .modal-dialog{transform:translate(0,0);}.modal-open .modal{overflow-x:hidden;overflow-y:auto;}.modal-dialog{position:relative;width:auto;margin:10px;}.modal-content{position:relative;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;outline:0;box-shadow:0 3px 9px rgba(0,0,0,.5);}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5;}.modal-header .close{margin-top:-2px;}.modal-title{margin:0;line-height:1.42857143;}.modal-body{position:relative;padding:15px;}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5;}.modal-footer .btn + .btn{margin-bottom:0;margin-left:5px;}.modal-footer .btn-group .btn + .btn{margin-left:-1px;}
@@ -26,7 +24,7 @@
 /*菜单*/
 .menu{position:fixed;z-index:1080;left:0;min-width:250px;height:100%;background:#ffffff;color:#555;overflow:auto;}.menu a{color:#555;text-decoration:none;}
 .menu ul{list-style:none;width:100%;margin:0;padding:0;}.menu ul li{position:relative;cursor:pointer;}
-.menu ul li a{display:block;height:47px;line-height:47px;}.menu ul li a:hover{background-color:#efeff0;}
+.menu ul li a{display:block;height:47px;line-height:47px;}.menu ul li a:hover{background-color:#efeff0;}.menu ul li>a.disabled{cursor:not-allowed;}
 .menu ul li ul{display:none;}
 .menu>ul>li>a{padding:0 15px;border-bottom:1px solid #ddd;}.menu>ul>li>a.has-arrow{background:-webkit-gradient(linear,left bottom,left top,color-stop(0,#efeff0),color-stop(1,#fafafa));background-color:#efeff0;}
 .menu ul li a.active{background-color:#ddd;}

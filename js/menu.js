@@ -2,7 +2,7 @@
  * menu v0.1 菜单
  * Created by huangfei on 2017.5.16
  */
-(function($){
+(function ($) {
     $.fn.menu = function (options) {
         var defaults = {
             speed: 200,         // 菜单折叠速度
@@ -14,6 +14,7 @@
         var settins = $.extend({}, defaults, options);
 
         init();
+
         function init() {
             $item.each(function (index, ele) {
                 if ($(ele).hasClass('active')) {
@@ -23,7 +24,8 @@
             })
             $item.click(fold);
             $(self).find('ul li a').click(function () {
-                if(!$(this).hasClass('has-arrow')){
+                if ($(this).hasClass('disabled')) return
+                if (!$(this).hasClass('has-arrow')) {
                     $(self).find('ul li a').removeClass('active');
                     $(this).addClass('active');
                 }

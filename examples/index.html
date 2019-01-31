@@ -67,7 +67,7 @@
                             <span>栉风沐雨</span>
                             <b class="caret"></b>
                         </a>
-                        <ul class="dropdown-menu pull-right" >
+                        <ul class="dropdown-menu pull-right">
                             <li>
                                 <a href="#" target="frame">账户信息</a>
                             </li>
@@ -94,56 +94,62 @@
     <div class="menu no-select webkit-scroll">
         <ul>
             <li>
-                <a href="">
-                    <span class="icon-home"></span> 首页
-                </a>
+                <a class="disabled" href="javascript:void(0)"><span class="icon-home"></span> 首页</a>
             </li>
             <li class="active">
                 <a class="has-arrow">
-                    <span class="icon-cog"></span> 说明
+                    <span class="icon-cog"></span> 基本组件
                 </a>
                 <ul>
-                    <li><a href="javascript:void(0)" class="active" target="frame">概述</a></li>
-                    <li><a href="javascript:void(0)" target="frame">Html书写规范</a></li>
-                    <li><a href="javascript:void(0)" target="frame">CSS写作注意事项</a></li>
-                    <li><a href="javascript:void(0)" target="frame">命名规范</a></li>
-                    <li><a href="javascript:void(0)" target="frame">常用正则表达式</a></li>
+                    <li><a href="btn.html" target="frame">btn按钮和其它组件</a></li>
+                    <li><a href="pagination.html" target="frame">pagination分页</a></li>
+                    <li><a href="table.html" target="frame">table表格</a></li>
+                    <li><a href="list.html" target="frame">list列表</a></li>
+                    <li><a href="images.html" target="frame">images缩略图</a></li>
+                    <li><a href="media.html" target="frame">media多媒体对象</a></li>
+                    <li><a class="disabled" href="javascript:void(0)" target="frame">animate动画</a></li>
+                    <li><a class="disabled" href="javascript:void(0)" target="frame">icon图标</a></li>
                 </ul>
             </li>
             <li>
                 <a class="has-arrow">
-                    <span class="icon-cog"></span> 框架
+                    <span class="icon-flag"></span> 导航组件
                 </a>
                 <ul>
-                    <li><a href="javascript:void(0)" target="frame">结构目录</a></li>
-                    <li><a>响应式栅格系统</a></li>
-                    <li><a>响应式隐藏显示</a></li>
+                    <li><a href="nav.html" target="frame">nav导航元素</a></li>
+                    <li><a href="navbar.html" target="frame">navbar导航栏</a></li>
+                    <li><a class="disabled">breadcrumb面包屑导航</a></li>
+                    <li><a class="disabled">dropdown下拉菜单</a></li>
                 </ul>
             </li>
             <li>
                 <a class="has-arrow">
-                    <i class="icon-th-large"></i> 基础
+                    <i class="icon-pencil"></i> 输入框组件
                 </a>
                 <ul>
-                    <li><a href="javascript:void(0)">排版</a></li>
-                    <li><a>代码</a></li>
-                    <li><a>表格</a></li>
-                    <li><a>表单</a></li>
-                    <li><a>按钮</a></li>
-                    <li><a>图片</a></li>
-                    <li><a>图标</a></li>
-                    <li><a>动画</a></li>
+                    <li><a href="form.html" target="frame">form表单</a></li>
                 </ul>
             </li>
             <li>
                 <a class="has-arrow">
-                    <i class="icon-th-list"></i> 组件
+                    <i class="icon-th-list"></i> 扩展组件
                 </a>
                 <ul>
-                    <li><a href="javascript:void(0)">按钮组</a></li>
-                    <li><a href="javascript:void(0)">导航&翻页</a></li>
-                    <li><a href="javascript:void(0)">下拉菜单</a></li>
-                    <li><a href="javascript:void(0)">幻灯片</a></li>
+                    <li><a class="disabled" href="javascript:void(0)">modal模态框</a></li>
+                    <li><a href="carousel.html" target="frame">carousel轮播图</a></li>
+                    <li><a href="lazyload.html" target="frame">lazyload懒加载</a></li>
+                    <li><a href="tooltip.html" target="frame">tooltip提示工具</a></li>
+                    <li><a href="popover.html" target="frame">popover弹出框</a></li>
+                    <li><a href="slider.html" target="frame">slider滑动器</a></li>
+                    <li><a href="scrollspy.html" target="frame">scrollspy滚动监听</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="has-arrow">
+                    <i class="icon-tag"></i> 页面
+                </a>
+                <ul>
+                    <li><a href="login.html" target="_blank">login登录</a></li>
                 </ul>
             </li>
         </ul>
@@ -152,7 +158,7 @@
     <!--右侧部分-->
     <div id="page-wrapper">
         <div id="content-main">
-            <iframe name="iframe" width="100%" height="100%" src="form.html" frameborder="0"></iframe>
+            <iframe name="frame" width="100%" height="100%" src="" frameborder="0"></iframe>
         </div>
 
         <!--页脚-->
