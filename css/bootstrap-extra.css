@@ -32,7 +32,7 @@
 .menu>ul>li>ul>li{text-indent:2em;}
 .menu .has-arrow{position:relative;}
 .menu .has-arrow:after{position:absolute;content:"";width:.5em;height:.5em;border-width:1px 0 0 1px;border-style:solid;border-color:initial;right:1em;-webkit-transform:rotate(-45deg) translateY(-50%);transform:rotate(-45deg) translateY(-50%);-webkit-transform-origin:top;transform-origin:top;top:50%;transition:all .3s ease-out;}
-.menu .active.has-arrow:after{transform: rotate(-135deg) translateY(-50%);}
+.menu .menu-show.has-arrow:after{transform: rotate(-135deg) translateY(-50%);}
 
 /*多媒体对象*/
 .media{margin-top:15px;}.media:first-child{margin-top:0;}.media,.media-body{overflow:hidden;zoom:1;}.media-body{width:10000px;}.media-object{display:block;}.media-object.img-thumbnail{max-width:none;}.media-right,.media > .pull-right{padding-left:10px;}.media-left,.media > .pull-left{padding-right:10px;}.media-left,.media-right,.media-body{display:table-cell;vertical-align:top;}.media-middle{vertical-align:middle;}.media-bottom{vertical-align:bottom;}.media-heading{margin-top:0;margin-bottom:5px;}.media-list{padding-left:0;list-style:none;}

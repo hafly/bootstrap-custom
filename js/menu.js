@@ -16,12 +16,14 @@
         init();
 
         function init() {
+            // 激活默认active的目录
             $item.each(function (index, ele) {
                 if ($(ele).hasClass('active')) {
-                    $(ele).find('.has-arrow').addClass('active');
+                    $(ele).find('.has-arrow').addClass('menu-show');
                     $(ele).children('ul').show();
                 }
-            })
+            });
+
             $item.click(fold);
             $(self).find('ul li a').click(function () {
                 if ($(this).hasClass('disabled')) return
@@ -32,22 +34,22 @@
             });
         }
 
-        //折叠菜单
+        // 折叠菜单
         function fold(e) {
             e.stopPropagation();
             var $this = $(this);
             if ($this.hasClass('active')) {
                 $this.removeClass('active').addClass('inactive');
                 $this.children('ul').slideUp(settins.speed);
-                $this.find('.has-arrow').removeClass('active');
+                $this.find('.has-arrow').removeClass('menu-show');
             }
             else {
                 $this.removeClass('inactive').addClass('active');
                 $this.children('ul').slideDown(settins.speed);
-                $this.find('.has-arrow').addClass('active');
+                $this.find('.has-arrow').addClass('menu-show');
                 if (settins.toggle) {
                     var $siblings = $this.siblings();
-                    $siblings.find('.has-arrow').removeClass('active');
+                    $siblings.find('.has-arrow').removeClass('menu-show');
                     $siblings.children('ul').slideUp(settins.speed);
                     $siblings.removeClass('active').addClass('inactive');
                 }

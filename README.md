@@ -3,6 +3,8 @@
 bootstrap的定制版，精简了一些功能 ，集合了一些常用插件。  
 模仿bootstrap，基本兼容bootstrap的功能；分离了bootstrap各个组件，方便修改。  
 
+示例：https://hafly.github.io/bootstrap-custom/examples/index.html  
+
 用到的css库：  
 animate.css 动画类库，文档：https://daneden.github.io/animate.css/  
 font-awesome.min.css 图标字类库，文档：http://www.bootcss.com/p/font-awesome/  
