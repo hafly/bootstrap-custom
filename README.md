@@ -12,7 +12,7 @@ animate.css 动画类库，文档：https://daneden.github.io/animate.css/
 font-awesome.min.css 图标字类库，文档：http://www.bootcss.com/p/font-awesome/  
 High-Logic FontCreator定制自己的图标字库，素材：http://www.iconfont.cn/  
 
-常用组件清单：http://blog.vr-seesee.com/postedit/84
+[常用组件清单](http://blog.vr-seesee.com/detail/84)
 
 ### Change Log
 
