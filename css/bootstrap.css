@@ -58,7 +58,7 @@ hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee;}
 .navbar-default{background-color:#f8f8f8;border-color:#e7e7e7;box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);}
 .navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a{color:#777;}.navbar-brand:hover,.navbar-default .navbar-nav>li>a:hover{color:#333;text-decoration: none;}
 .navbar-default .navbar-nav>li.active>a{background-color:#e7e7e7;}.navbar-default .navbar-nav>li.active>a{color:#555;}
-.navbar-default .navbar-nav>li.disabled>a{color:#ccc;background-color:transparent;}
+.navbar-default .navbar-nav>li.disabled>a{color:#ccc;background-color:transparent;cursor:not-allowed;}
 
 /*下拉菜单*/
 .dropdown{cursor:pointer;outline:none;}

@@ -25,19 +25,20 @@
             });
 
             $item.click(fold);
-            $(self).find('ul li a').click(function () {
-                if ($(this).hasClass('disabled')) return
-                if (!$(this).hasClass('has-arrow')) {
-                    $(self).find('ul li a').removeClass('active');
-                    $(this).addClass('active');
-                }
-            });
         }
 
         // 折叠菜单
         function fold(e) {
             e.stopPropagation();
             var $this = $(this);
+            var $a = $(this).find('a');
+
+            if ($this.hasClass('disabled')) return false;
+            if (!$a.hasClass('has-arrow')) {
+                $(self).find('ul li a').removeClass('active');
+                $a.addClass('active');
+            }
+
             if ($this.hasClass('active')) {
                 $this.removeClass('active').addClass('inactive');
                 $this.children('ul').slideUp(settins.speed);
